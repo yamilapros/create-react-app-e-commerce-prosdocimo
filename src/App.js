@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './container/ItemListContainer/ItemListContainer';
 
 
 function App() {
@@ -12,8 +11,7 @@ function App() {
  
   return (
     <div className="App">
-     <NavBar />
-     <ItemListContainer title="Fashion Sale" subtitle="Nueva Colección" cta="Comprar ahora"/>
+      <NavBar />
     </div>
   );
 }
