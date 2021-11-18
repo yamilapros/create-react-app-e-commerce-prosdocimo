@@ -5,6 +5,7 @@
 .item-menu{
     text-transform: uppercase !important;
     color: black !important;
+    font-family: 'Work Sans', sans-serif;
 }
 .item-menu:hover{
     color: #F22727 !important;

@@ -1,0 +1,23 @@
+.card{
+    border: 1px solid transparent;
+}
+.card-title{
+    font-family: 'Quantico', sans-serif;
+}
+.card-price{
+    font-size: 30px;
+    font-family: 'Quantico', sans-serif;
+}
+.btn-store{
+    background-color: #088C74;
+    border: 2px solid #088C74;
+    color: white;
+    padding: 18px 40px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.btn-store:hover{
+    background-color: #F2293A;
+    border: 2px solid #F2293A;
+    color: white;
+}

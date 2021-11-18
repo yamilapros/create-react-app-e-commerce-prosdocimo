@@ -11,3 +11,8 @@
     height: auto !important;
     object-fit: cover;
 }
+@media screen and (max-width:768px){
+    .hero-carousel-item img{
+        height: 100% !important;
+    }
+}
