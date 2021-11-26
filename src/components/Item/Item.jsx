@@ -3,6 +3,7 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import './Item.css'
+import { NavLink } from 'react-router-dom'
 
 const Item = ({product}) => {
     /* console.log('Product', product) */
@@ -16,7 +17,7 @@ const Item = ({product}) => {
                     <Card.Text>
                     <span className="card-price">{price}&euro;</span>
                     </Card.Text>
-                    <Button className="btn-store"><i class="far fa-eye"></i>&nbsp;Detalles</Button>
+                    <Button as={NavLink} to={`/detalle/${id}`} className="btn-store"><i class="far fa-eye"></i>&nbsp;Detalles</Button>
                 </Card.Body>
             </Card>
         </Col>

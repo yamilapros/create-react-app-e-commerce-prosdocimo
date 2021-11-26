@@ -7,23 +7,45 @@ import './ItemListContainer.css'
 import { getData } from '../../helpers/getData';
 import ItemList from '../ItemList/ItemList';
 import Loader from './../Loader/Loader';
+import Hero from './../Hero/Hero';
+
+import { useParams } from 'react-router-dom';
+
 
 const ItemListContainer = ({title}) => {
     //Variables
     const [data, setData] = useState([])
     const [loader, setLoader] = useState(true)
 
+
+    const { idCategoria } = useParams()
+
     //Fetch - LLamada a la API
     useEffect(() => {
-        getData
-        .then(res => setData(res))
+        if(idCategoria){
+            getData
+            .then(res => {
+                console.log(idCategoria)
+                setData(res.filter(product => product.category === idCategoria))
+            })
+            .catch(err => console.log(err))
+            .finally(() => setLoader(false))
+        }else{
+            getData
+        .then(res => {
+            console.log(res)
+            setData(res)
+        })
         .catch(err => console.log(err))
         .finally(() => setLoader(false))
-    }, [])
+        }
+        
+    }, [idCategoria])
     
-    console.log(data)
+    /* console.log(data) */
     return (
         <main>
+            <Hero />
             <Container fluid className="d-flex justify-content-center">
                 <Row className="d-flex justify-content-center">
                     <Col lg="11">
