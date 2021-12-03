@@ -25,7 +25,7 @@ const ItemListContainer = ({title}) => {
         if(idCategoria){
             getData
             .then(res => {
-                console.log(idCategoria)
+                /* console.log(idCategoria) */
                 setData(res.filter(product => product.category === idCategoria))
             })
             .catch(err => console.log(err))
@@ -33,7 +33,7 @@ const ItemListContainer = ({title}) => {
         }else{
             getData
         .then(res => {
-            console.log(res)
+            /* console.log(res) */
             setData(res)
         })
         .catch(err => console.log(err))

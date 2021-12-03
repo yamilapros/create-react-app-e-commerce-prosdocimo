@@ -6,30 +6,25 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NotFound from './pages/NotFound/NotFound';
-
-
-
-
+import CartContextProvider from './context/CartContext';
 
 function App() {
-  /* const style = { backgroundColor: 'blue' }
-  const handlerOnClick = () => {
-    console.log('Hola')
-  } */
  
   return (
-    <BrowserRouter>
-      <div className="App">
-        <NavBar />
-        <Routes>
-          <Route exact path='/' element={<ItemListContainer title="Tu tienda online de moda urbana, skate, scooter & snowboard"/>} />
-          <Route exact path='/categoria/:idCategoria' element={<ItemListContainer title="Tu tienda online de moda urbana, skate, scooter & snowboard"/>} />
-          <Route exact path='/detalle/:idProducto' element={<ItemDetailContainer />} />
-          <Route exact path='/cart' element={<Cart />} />
-          <Route exact path='*' element={<NotFound />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <CartContextProvider>
+      <BrowserRouter>
+        <div className="App">
+          <NavBar />
+          <Routes>
+            <Route exact path='/' element={<ItemListContainer title="Tu tienda online de moda urbana, skate, scooter & snowboard"/>} />
+            <Route exact path='/categoria/:idCategoria' element={<ItemListContainer title="Tu tienda online de moda urbana, skate, scooter & snowboard"/>} />
+            <Route exact path='/detalle/:idProducto' element={<ItemDetailContainer />} />
+            <Route exact path='/cart' element={<Cart />} />
+            <Route exact path='*' element={<NotFound />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </CartContextProvider>
   );
 }
 

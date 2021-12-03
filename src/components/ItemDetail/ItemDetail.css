@@ -63,3 +63,11 @@ button:hover{
     border-color: #222;
     color: #fff;
 }
+.btn-dark{
+    background-color: #222;
+    border-color: #222;
+}
+.btn-dark:hover{
+    background-color: #150C0C;
+    border-color: #150C0C;
+}

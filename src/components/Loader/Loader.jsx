@@ -3,37 +3,37 @@ import './Loader.css'
 
 const Loader = () => {
     return (
-        <div class="cssload-wrap">
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
-            <div class="cssload-circle"></div>
+        <div className="cssload-wrap">
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
+            <div className="cssload-circle"></div>
         </div>
     )
 }

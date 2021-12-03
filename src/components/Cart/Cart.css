@@ -17,3 +17,45 @@
 .card-cart h3{
     margin-top: 10px;
 }
+
+
+.table-image{
+    width: 85px;
+}
+th{
+    line-height: 40px !important;
+    height: 40px !important;
+}
+td{
+    background-color: white !important;
+    line-height: 86px;
+    height: 86px;
+}
+.btn-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-white{
+    border-color: #666666;
+    background-color: white;
+    color: #666666;
+}
+.btn-white:hover{
+    background-color: #232323 !important;
+    color: #fff;
+    border-color: #232323;
+    box-shadow: none;
+}
+.btn-delete:hover{
+    background-color: #d10a11 !important;
+    color: #fff;
+    border-color: #d10a11;
+    box-shadow: none;
+}
+i{
+    cursor: pointer;
+}
+i:hover{
+    color: #d10a11;
+}

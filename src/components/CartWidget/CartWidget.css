@@ -1,0 +1,32 @@
+.link-special{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.cart-quantity-info{
+    margin: 0 6px;
+    font-weight: normal;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: Arial;
+    color: #fff;
+    background-color: #191919;
+    min-width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.1px;
+    margin-top: -1px;
+    border-radius: 50%;
+}
+.cart-quantity-info-red{
+    background-color: #d10a11;
+}
+.cart-price-info{
+    font-size: 0.8rem;
+    color: #191919;
+    font-weight: 600;
+}

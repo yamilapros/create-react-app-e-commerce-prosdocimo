@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
         getData
         .then(res => {
             setItem(res.find(element => element.id === idProducto))
-            console.log(item)
+            /* console.log(item) */
         })
         .catch(err => console.log(err))
     }, [idProducto, item])

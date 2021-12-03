@@ -23,16 +23,16 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto">
-                    <Nav.Link as={NavLink} to={'/categoria/camisetas'} className="item-menu">Camisetas</Nav.Link>
-                    <Nav.Link as={NavLink} to={'categoria/sudaderas'} className="item-menu">Sudaderas</Nav.Link>
-                    <Nav.Link as={NavLink} to={'categoria/chaquetas'} className="item-menu">Chaquetas</Nav.Link>
-                    <Nav.Link as={NavLink} to={'categoria/pantalones'} className="item-menu">Pantalones</Nav.Link>
-                    <Nav.Link as={NavLink} to={'categoria/skateboarding'} className="item-menu">Skateboarding</Nav.Link>
-                    <Nav.Link as={NavLink} to={'categoria/calzado'} className="item-menu">Calzado</Nav.Link>
-                    <Nav.Link as={NavLink} to={'categoria/complementos'} className="item-menu">Complementos</Nav.Link>
+                        <Nav.Link as={NavLink} to={'/categoria/camisetas'} className="item-menu">Camisetas</Nav.Link>
+                        <Nav.Link as={NavLink} to={'categoria/sudaderas'} className="item-menu">Sudaderas</Nav.Link>
+                        <Nav.Link as={NavLink} to={'categoria/chaquetas'} className="item-menu">Chaquetas</Nav.Link>
+                        <Nav.Link as={NavLink} to={'categoria/pantalones'} className="item-menu">Pantalones</Nav.Link>
+                        <Nav.Link as={NavLink} to={'categoria/skateboarding'} className="item-menu">Skateboarding</Nav.Link>
+                        <Nav.Link as={NavLink} to={'categoria/calzado'} className="item-menu">Calzado</Nav.Link>
+                        <Nav.Link as={NavLink} to={'categoria/complementos'} className="item-menu">Complementos</Nav.Link>
                     </Nav>
                     <Nav>
-                    <Nav.Link href="#deets"><CartWidget /></Nav.Link>
+                    <Nav.Link><CartWidget /></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

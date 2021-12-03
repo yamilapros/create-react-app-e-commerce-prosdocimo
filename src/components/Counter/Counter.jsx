@@ -1,20 +1,20 @@
 import React from 'react'
-import { useState } from 'react'
+/* import { useState } from 'react' */
 import './Counter.css'
 
-const Counter = () => {
-    const [counter, setCounter] = useState(0)
+const Counter = ({counter, setCounter}) => {
+    /* const [counter, setCounter] = useState(1) */
 
     const handlerClickLess = () => {
         setCounter(counter - 1)
-        if(counter < 0){
-            alert('Ops...No puedes ingresar un número menor a 0')
-            setCounter(0)
+        if(counter <= 1){
+            alert('Ops...No puedes ingresar un número menor a 1')
+            setCounter(1)
         }
     }
     const handlerClickMore = () => {
         setCounter(counter + 1)
-        console.log(counter)
+        /* console.log(counter) */
     }
     return (
         <div className="counter-wrapper">
