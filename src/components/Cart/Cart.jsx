@@ -5,14 +5,25 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import './Cart.css'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { NavLink, Link } from 'react-router-dom';
 
 
 const Cart = () => {
     const { cartList, clear, removeItem } = useContext(CartContext)
+    const [total, setTotal] = useState(0)
 
+    useEffect(() => {
+        let temp = 0;
+        if(cartList.length > 0){
+            cartList.map(item => {
+                temp = (temp + item.price)
+                console.log(temp)
+            })
+            setTotal(parseFloat(Math.round(temp * 100) / 100).toFixed(2))
+        }
+    })
     return (
         <div>
         { cartList.length === 0 
@@ -44,7 +55,7 @@ const Cart = () => {
                                     <tr key={item.id}>
                                     <td><img className="table-image" src={item.image} /></td>
                                     <td>{item.name}</td>
-                                    <td>{item.price}&euro;</td>
+                                    <td>{parseFloat(Math.round(item.price * 100) / 100).toFixed(2)}&euro;</td>
                                     <td>{item.quantity}</td>
                                     <td><i onClick={()=> {removeItem(item.id)}} class="far fa-trash-alt"></i></td>
                                     </tr>)}
@@ -54,6 +65,7 @@ const Cart = () => {
                             <Link to={'/'}>
                                 <button  className="btn-white" >Continuar comprando</button>
                             </Link>
+                        <h4>Total a pagar: {total}&euro;</h4>
                         <button className="btn-white btn-delete" onClick={clear}>Vaciar Carrito</button>
                         </div>
                         

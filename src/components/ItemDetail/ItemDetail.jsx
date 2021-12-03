@@ -13,7 +13,7 @@ const ItemDetail = ({producto}) => {
     const { addItem, cartList } = useContext(CartContext)
     const [counter, setCounter] = useState(1)
     const [textButton, setTextButton] = useState('select')
-
+    const price = producto.price
     const addToCart = () => {
         const resultado = cartList.filter(el => el.id === producto.id)
         if(resultado.length === 0){
@@ -34,7 +34,7 @@ const ItemDetail = ({producto}) => {
                 <h2>{producto.name}</h2>
                 <small>Producto no.: {producto.id}</small>
                 <div className="availability">En Stock</div>
-                <h3>{producto.price}&euro;</h3>
+                <h3>{parseFloat(Math.round(price * 100) / 100).toFixed(2)}&euro;</h3>
                 <h4>Descripción Breve: </h4>
                 <p>{producto.description}</p>
                 <Counter counter={counter} setCounter={setCounter}/>
