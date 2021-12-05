@@ -5,25 +5,14 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import './Cart.css'
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Cart = () => {
-    const { cartList, clear, removeItem } = useContext(CartContext)
-    const [total, setTotal] = useState(0)
-
-    useEffect(() => {
-        let temp = 0;
-        if(cartList.length > 0){
-            cartList.map(item => {
-                temp = (temp + item.price)
-                console.log(temp)
-            })
-            setTotal(parseFloat(Math.round(temp * 100) / 100).toFixed(2))
-        }
-    })
+    const { cartList, clear, removeItem,subtotalProduct, totalToPay } = useContext(CartContext)
+    
     return (
         <div>
         { cartList.length === 0 
@@ -47,6 +36,7 @@ const Cart = () => {
                                 <th>Nombre de Producto</th>
                                 <th>Precio</th>
                                 <th>Cantidad</th>
+                                <th>Subtotal</th>
                                 <th></th>
                                 </tr>
                             </thead>
@@ -57,6 +47,7 @@ const Cart = () => {
                                     <td>{item.name}</td>
                                     <td>{parseFloat(Math.round(item.price * 100) / 100).toFixed(2)}&euro;</td>
                                     <td>{item.quantity}</td>
+                                    <td>{subtotalProduct(item.price, item.quantity)}&euro;</td>
                                     <td><i onClick={()=> {removeItem(item.id)}} class="far fa-trash-alt"></i></td>
                                     </tr>)}
                             </tbody>
@@ -65,7 +56,7 @@ const Cart = () => {
                             <Link to={'/'}>
                                 <button  className="btn-white" >Continuar comprando</button>
                             </Link>
-                        <h4>Total a pagar: {total}&euro;</h4>
+                        <h4>Total a pagar: {totalToPay()}&euro;</h4>
                         <button className="btn-white btn-delete" onClick={clear}>Vaciar Carrito</button>
                         </div>
                         

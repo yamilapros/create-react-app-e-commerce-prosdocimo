@@ -1,23 +1,27 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './CartWidget.css'
-import { useContext, useState, useEffect } from 'react'
+import { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 
 const CartWidget = () => {
-    const { cartList } = useContext(CartContext)
-    const [total, setTotal] = useState(0)
-
-    useEffect(() => {
+    const { cartList, totalToPay } = useContext(CartContext)
+    
+    /* const [total, setTotal] = useState(0) */
+    
+    /* useEffect(() => {
         let temp = 0;
+        let quantity = 0;
         if(cartList.length > 0){
             cartList.map(item => {
                 temp = (temp + item.price)
-                console.log(temp)
+               
+               quantity = item.quantity
             })
-            setTotal(parseFloat(Math.round(temp * 100) / 100).toFixed(2))
+            
+            setTotal(temp*quantity)
         }
-    })
+    }) */
     
     return (
         <NavLink to={'/cart'} className="link-special">
@@ -34,8 +38,14 @@ const CartWidget = () => {
             {cartList.length}
         </span>
         }
-        
-            <span className="cart-price-info">{total}&euro;</span>
+        {
+            cartList.length === 0
+            ?
+            <span className="cart-price-info">0&euro;</span>
+            :
+            <span className="cart-price-info">{totalToPay()}&euro;</span>
+        }
+            
            
         </NavLink>
      

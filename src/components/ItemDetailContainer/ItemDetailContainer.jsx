@@ -4,9 +4,9 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { useParams } from 'react-router-dom'
-import { getData } from '../../helpers/getData'
 import ItemDetail from '../ItemDetail/ItemDetail';
-
+import { db } from '../../Firebase/firebase';
+import { doc, getDoc, data } from 'firebase/firestore';
 
 
 
@@ -16,12 +16,12 @@ const ItemDetailContainer = () => {
 
     
     useEffect(() => {
-        getData
-        .then(res => {
-            setItem(res.find(element => element.id === idProducto))
-            /* console.log(item) */
-        })
-        .catch(err => console.log(err))
+        const getProductById = async () => {
+            const docRef = doc(db, "productos", idProducto);
+            const docSnap = await getDoc(docRef);
+            setItem({...docSnap.data(), id: docSnap.id})
+        }
+        getProductById()
     }, [idProducto, item])
 
     

@@ -4,45 +4,46 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './ItemListContainer.css'
-import { getData } from '../../helpers/getData';
 import ItemList from '../ItemList/ItemList';
 import Loader from './../Loader/Loader';
 import Hero from './../Hero/Hero';
-
 import { useParams } from 'react-router-dom';
+import { db } from '../../Firebase/firebase';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 
 const ItemListContainer = ({title}) => {
     //Variables
     const [data, setData] = useState([])
     const [loader, setLoader] = useState(true)
-
-
     const { idCategoria } = useParams()
 
-    //Fetch - LLamada a la API
+    
+    //useEffect Hook
     useEffect(() => {
         if(idCategoria){
-            getData
-            .then(res => {
-                /* console.log(idCategoria) */
-                setData(res.filter(product => product.category === idCategoria))
-            })
-            .catch(err => console.log(err))
-            .finally(() => setLoader(false))
+            const getProductsByCategory = async () => {
+                const q = query(collection(db, "productos"), where("category", "==", idCategoria));
+                const dataCollection = await getDocs(q)
+                /* console.log(dataCollection) */
+                setData(dataCollection.docs.map((doc) => ({...doc.data(), id: doc.id})))
+                setLoader(false)
+            }
+            getProductsByCategory()
         }else{
-            getData
-        .then(res => {
-            /* console.log(res) */
-            setData(res)
-        })
-        .catch(err => console.log(err))
-        .finally(() => setLoader(false))
+            const getProducts = async () => {
+                const productsCollectionRef = collection(db, "productos")
+                const dataCollection = await getDocs(productsCollectionRef)
+                /* console.log(dataCollection) */
+                setData(dataCollection.docs.map((doc) => ({...doc.data(), id: doc.id})))
+                setLoader(false)
+            }
+            getProducts()
         }
         
     }, [idCategoria])
     
-    /* console.log(data) */
+    //Rendering
     return (
         <main>
             <Hero />
