@@ -8,8 +8,6 @@ const CartContextProvider = ({children}) => {
     //totalPay: Array de precios subtotales para dar precio total a pagar
     const [totalPay, setTotalPay] = useState([])
 
-
-    
     //Agregar un item al carrito
     const addItem = (item) => {
         setCartList( [...cartList, item] )

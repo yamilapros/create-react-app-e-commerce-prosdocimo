@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-import Table from 'react-bootstrap/Table'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -11,8 +10,9 @@ import { Link } from 'react-router-dom';
 
 
 const Cart = () => {
-    const { cartList, clear, removeItem,subtotalProduct, totalToPay } = useContext(CartContext)
+    const { cartList, clear, removeItem, subtotalProduct, totalToPay } = useContext(CartContext)
     
+
     return (
         <div>
         { cartList.length === 0 
@@ -26,40 +26,76 @@ const Cart = () => {
             </Card>
             :
             
-            <Container>
+            <Container fluid>
                 <Row>
-                    <Col>
-                        <Table striped bordered hover>
-                            <thead>
-                                <tr>
-                                <th></th>
-                                <th>Nombre de Producto</th>
-                                <th>Precio</th>
-                                <th>Cantidad</th>
-                                <th>Subtotal</th>
-                                <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {cartList.map(item => 
-                                    <tr key={item.id}>
-                                    <td><img className="table-image" src={item.image} /></td>
-                                    <td>{item.name}</td>
-                                    <td>{parseFloat(Math.round(item.price * 100) / 100).toFixed(2)}&euro;</td>
-                                    <td>{item.quantity}</td>
-                                    <td>{subtotalProduct(item.price, item.quantity)}&euro;</td>
-                                    <td><i onClick={()=> {removeItem(item.id)}} class="far fa-trash-alt"></i></td>
-                                    </tr>)}
-                            </tbody>
-                        </Table>
+                    <Col lg="12">
+                        <h1 className='main-title__cart'>Cesta</h1>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg="9">
+                        <div className='table-order'>
+                            <div className="table-order__head">
+                                <div className="table-order__head-column table-order__colum-1">
+
+                                </div>
+                                <div className="table-order__head-column table-order__column-2">
+                                    Nombre del Producto
+                                </div>
+                                <div className="table-order__head-column table-order__colum-1">
+                                    Precio
+                                </div>
+                                <div className="table-order__head-column table-order__colum-1">
+                                    Cantidad
+                                </div>
+                                <div className="table-order__head-column table-order__colum-1">
+                                    Subtotal
+                                </div>
+                                <div className="table-order__head-column table-order__colum-1">
+                                    
+                                </div>
+                            </div>
+                            {cartList.map(item => 
+                            <div className="table-order__body" key={item.id}>
+                                
+                                <div className="table-order__body-column table-order__colum-1 table-order__image">
+                                    <img className="table-order-image" src={item.image} />
+                                </div>
+                                <div className="table-order__body-column table-order__column-2 table-order__text">
+                                    {item.name}
+                                </div>
+                                <div className="table-order__body-column table-order__colum-1 table-order__price">
+                                    {parseFloat(Math.round(item.price * 100) / 100).toFixed(2)}&euro;
+                                </div>
+                                <div className="table-order__body-column table-order__colum-1">
+                                    <span className='show-mobile-text'>Cantidad:</span>{item.quantity}
+                                </div>
+                                <div className="table-order__body-column table-order__colum-1 table-order__total">
+                                    <span className='show-mobile-text'>Subtotal:</span>{subtotalProduct(item.price, item.quantity)}&euro;
+                                </div>
+                                <div className="table-order__body-column table-order__colum-1 table-order__trash">
+                                    <i onClick={()=> {removeItem(item.id)}} class="far fa-trash-alt"></i>
+                                </div>
+                            </div>
+                            )}
+                        </div>
                         <div className="btn-section">
                             <Link to={'/'}>
                                 <button  className="btn-white" >Continuar comprando</button>
                             </Link>
-                        <h4>Total a pagar: {totalToPay()}&euro;</h4>
-                        <button className="btn-white btn-delete" onClick={clear}>Vaciar Carrito</button>
+                            <button className="btn-white btn-delete" onClick={clear}>Vaciar Carrito</button>
                         </div>
                         
+                    </Col>
+                    <Col lg="3">
+                        <div className="wrapper-cart__total">
+                            <h5>Total</h5>
+                            <h4>Suma total: <span className='red'>{totalToPay()}&euro;</span></h4>
+                            <Link to={'/order'}>
+                                <button className="btn-white btn-success">Realizar Pedido</button>
+                            </Link>
+                            
+                        </div>
                     </Col>
                 </Row>
             </Container>

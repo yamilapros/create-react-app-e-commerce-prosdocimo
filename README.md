@@ -1,21 +1,34 @@
-# Getting Started with Create React App
+# Ecommerce Slappy Skateboarding & Co React / Firebase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ecommerce de productos Skateboarding, ropa y complementos.
 
-## En este proyecto usé:
+El Ecommerce cuenta con un Navbar, en donde el usuario puede encontrar los productos divididos por categorías.
 
-CSS: 
-React Bootstrap 
-Flexbox
-react-router-dom
-useEffect, useParams y useState
+Cuenta con una vista de detalle, donde se puede ver la descripción y el precio.
 
-Este proyecto es un E-commerce de Productos de Ropa, Skateboarding y complementos para mujer y hombre
+Y luego cuenta con un carrito de la compra, donde se van agregando los productos, cuando el usuario quiere finalizar la compra, hay un formulario simulando los datos de envío y luego, una respuesta de confirmación cuando el pedido ha sido realizado con éxito.
 
-Cuenta con una barra de navegación, con todas las categorías de la tienda, un carrito de la compra, el detalle de cada producto y además una página 404, por si el usuario escribe en la url algo que no existe
+Para este proyecto usé **React v ^17.0.2**,  **React Bootstrap**, **React router dom v ^6.0.2**, Hooks como **useState**, **useEffect** y **useContext** y **Firebase v9** como base de datos.
 
-Dejo un MP4 del proyecto en We Transfer: 
+## Página principal
+![pagina principal](https://i.ibb.co/RgGzyqz/React-App.png)
+![pagina principal productos](https://i.ibb.co/HVFGTpr/React-App-1.png)
+## Página de detalle del producto
+![pagina del detalle del producto](https://i.ibb.co/zRy1s0X/React-App-2.png)
+## Página del carrito de la compra
+![pagina del carrito de la compra](https://i.ibb.co/K52cWtZ/React-App-3.png)
+## Página de formulario para realizar el Pedido
+![Pedido](https://i.ibb.co/CnNSbRp/React-App-4.png)
+## Página de Compra Exitosa
+![compra exitosa](https://i.ibb.co/SXprckx/React-App-5.png)
+## Página 404 Not Found
+![not found](https://i.ibb.co/FYt5MG9/React-App-6.png)
 
-https://wetransfer.com/downloads/9ae85f21a615f771103c9c104d6d5d5320211126083634/fecb93bf32d8d9276b49a3adb731b8b520211126083635/980d21
+## Enlace de Ecommerce subido a **Heroku**
+[Ecommerce Slappy Skateboard & Co. web]()
 
+## Enlace a video de la aplicación en **We Transfer**
+[Ecommerce Slappy Skateboard & Co. video](https://wetransfer.com/downloads/c28ba6df241a7b6f219c5bae7e0a439820211215145531/edf48938d0777b648634d38bef1d13ab20211215145531/dcc34f)
 
+## Enlace de Ecommerce subido a **Gihub**
+[Ecommerce Slappy Skateboard & Co. Github]()

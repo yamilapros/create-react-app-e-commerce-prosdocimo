@@ -1,11 +1,36 @@
-.card{
-    border: 1px solid transparent;
+.card-detail__wrapper{
+    border: 1px solid #eee;
+    box-shadow: 10px 5px 5px #eee;
+    min-height: 502.03px !important;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.card-detail__wrapper:hover{
+    transform: translateY(-20px);
+}
+@media (max-width:768px){
+    .card-detail__wrapper{
+        min-height: 450px !important;
+    }
+}
+.card-detail__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .card-title{
     font-family: 'Quantico', sans-serif;
+    color: #222222;
+    text-align: center;
 }
 .card-price{
     font-size: 30px;
+    color: #222222;
     font-family: 'Quantico', sans-serif;
     text-align: center;
 }

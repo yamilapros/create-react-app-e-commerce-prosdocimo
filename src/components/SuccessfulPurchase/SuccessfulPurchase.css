@@ -1,0 +1,39 @@
+.successful-purchase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #eee;
+    box-shadow: 10px 5px 5px #eee;
+    padding: 50px;
+}
+.successful-purchase__image{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.successful-purchase__title{
+    color: #222;
+    font-size: 50px;
+    font-family: 'Quantico', sans-serif;
+}
+.successful-purchase__data{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.light-blue{
+    color: #67a2d7;
+    text-transform: none;
+}
+@media (max-width:768px){
+    .successful-purchase__title {
+        font-size: 36px;
+    }
+    .successful-purchase__image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+}

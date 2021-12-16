@@ -23,20 +23,28 @@ const ItemListContainer = ({title}) => {
     useEffect(() => {
         if(idCategoria){
             const getProductsByCategory = async () => {
-                const q = query(collection(db, "productos"), where("category", "==", idCategoria));
-                const dataCollection = await getDocs(q)
-                /* console.log(dataCollection) */
-                setData(dataCollection.docs.map((doc) => ({...doc.data(), id: doc.id})))
-                setLoader(false)
+                try {
+                    const q = query(collection(db, "productos"), where("category", "==", idCategoria));
+                    const dataCollection = await getDocs(q)
+                    setData(dataCollection.docs.map((doc) => ({...doc.data(), id: doc.id})))
+                    setLoader(false)
+                } catch (error) {
+                    console.log('Error')
+                }
+                
             }
             getProductsByCategory()
         }else{
             const getProducts = async () => {
-                const productsCollectionRef = collection(db, "productos")
-                const dataCollection = await getDocs(productsCollectionRef)
-                /* console.log(dataCollection) */
-                setData(dataCollection.docs.map((doc) => ({...doc.data(), id: doc.id})))
-                setLoader(false)
+                try {
+                    const productsCollectionRef = collection(db, "productos")
+                    const dataCollection = await getDocs(productsCollectionRef)
+                    setData(dataCollection.docs.map((doc) => ({...doc.data(), id: doc.id})))
+                    setLoader(false)
+                } catch (error) {
+                    console.log(error)
+                }
+                
             }
             getProducts()
         }
@@ -51,7 +59,7 @@ const ItemListContainer = ({title}) => {
                 <Row className="d-flex justify-content-center">
                     <Col lg="11">
 
-                        <h1>{title}</h1>
+                        <h1 className='main-title'>{title}</h1>
                         {loader ? <Loader/> : <ItemList products={data}/>}
                     </Col>
                 </Row>

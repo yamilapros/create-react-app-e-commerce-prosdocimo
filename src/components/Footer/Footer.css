@@ -1,0 +1,25 @@
+.footer{
+    margin-top: 50px;
+    padding: 30px 50px 20px 50px;
+    background-color: #e9ecef;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.footer p{
+    line-height: 10px !important;
+    font-size: 15px;
+}
+@media (max-width:768px){
+    .footer p{
+        font-size: 13px;
+        line-height: 13px !important;
+    }
+}
+.footer i{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.footer h4{
+    font-family: 'Quantico', sans-serif;
+}
