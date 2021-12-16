@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/create-react-app-e-commerce-prosdocimo/static/css/main.39865334.chunk.css",
-    "main.js": "/create-react-app-e-commerce-prosdocimo/static/js/main.f98a696a.chunk.js",
-    "main.js.map": "/create-react-app-e-commerce-prosdocimo/static/js/main.f98a696a.chunk.js.map",
+    "main.css": "/create-react-app-e-commerce-prosdocimo/static/css/main.4cf16baa.chunk.css",
+    "main.js": "/create-react-app-e-commerce-prosdocimo/static/js/main.50e80930.chunk.js",
+    "main.js.map": "/create-react-app-e-commerce-prosdocimo/static/js/main.50e80930.chunk.js.map",
     "runtime-main.js": "/create-react-app-e-commerce-prosdocimo/static/js/runtime-main.b76af829.js",
     "runtime-main.js.map": "/create-react-app-e-commerce-prosdocimo/static/js/runtime-main.b76af829.js.map",
     "static/css/2.383c0125.chunk.css": "/create-react-app-e-commerce-prosdocimo/static/css/2.383c0125.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.cbe49b39.chunk.js.map": "/create-react-app-e-commerce-prosdocimo/static/js/2.cbe49b39.chunk.js.map",
     "index.html": "/create-react-app-e-commerce-prosdocimo/index.html",
     "static/css/2.383c0125.chunk.css.map": "/create-react-app-e-commerce-prosdocimo/static/css/2.383c0125.chunk.css.map",
-    "static/css/main.39865334.chunk.css.map": "/create-react-app-e-commerce-prosdocimo/static/css/main.39865334.chunk.css.map",
+    "static/css/main.4cf16baa.chunk.css.map": "/create-react-app-e-commerce-prosdocimo/static/css/main.4cf16baa.chunk.css.map",
     "static/js/2.cbe49b39.chunk.js.LICENSE.txt": "/create-react-app-e-commerce-prosdocimo/static/js/2.cbe49b39.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b76af829.js",
     "static/css/2.383c0125.chunk.css",
     "static/js/2.cbe49b39.chunk.js",
-    "static/css/main.39865334.chunk.css",
-    "static/js/main.f98a696a.chunk.js"
+    "static/css/main.4cf16baa.chunk.css",
+    "static/js/main.50e80930.chunk.js"
   ]
 }
