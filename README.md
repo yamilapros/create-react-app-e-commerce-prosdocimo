@@ -24,8 +24,8 @@ Para este proyecto usé **React v ^17.0.2**,  **React Bootstrap**, **React route
 ## Página 404 Not Found
 ![not found](https://i.ibb.co/FYt5MG9/React-App-6.png)
 
-## Enlace de Ecommerce subido a **Heroku**
-[Ecommerce Slappy Skateboard & Co. web]()
+## Enlace de Ecommerce subido a **GitHub Pages**
+[Ecommerce Slappy Skateboard & Co. web](http://yamilapros.github.io/create-react-app-e-commerce-prosdocimo)
 
 ## Enlace a video de la aplicación en **We Transfer**
 [Ecommerce Slappy Skateboard & Co. video](https://wetransfer.com/downloads/c28ba6df241a7b6f219c5bae7e0a439820211215145531/edf48938d0777b648634d38bef1d13ab20211215145531/dcc34f)

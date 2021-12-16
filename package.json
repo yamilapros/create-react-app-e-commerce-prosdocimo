@@ -2,6 +2,7 @@
   "name": "e-commerce-prosdocimo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://yamilapros.github.io/create-react-app-e-commerce-prosdocimo",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -9,6 +10,7 @@
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.7.0",
     "firebase": "^9.6.0",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.2",
     "react-dom": "^17.0.2",
